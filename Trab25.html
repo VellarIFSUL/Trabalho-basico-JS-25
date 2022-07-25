@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Trabalho 25 Jul</title>
+        <script>
+            function twoOne(){
+                document.getElementById('2').style.backgroundColor = "Red";
+                document.getElementById('2').style.color = "Grey";
+            }
+            function twoTwo(){
+                document.getElementById('2').style.backgroundColor = "Blue";
+                document.getElementById('2').style.color = "White";
+            }
+            function twoTree(){
+                document.getElementById('2').style.backgroundColor = "Magenta";
+            }
+            function tree(){
+                tree = document.getElementsByClassName('tree');
+                for(i=0;i<tree.length;i++){
+                    tree[i].style.margin=(i*6)+"px";
+                    tree[i].style.color="White";
+                    tree[i].style.border="2px solid pink";
+                    tree[i].style.backgroundColor= "Black";
+                }
+            }
+            function forOne(){
+                document.getElementById('4').innerText += document.getElementById("4T").value;
+            }
+            function forTwo(){
+                document.getElementById('4').innerText += "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptates voluptatibus, quidem aliquam possimus adipisci facilis hic! Adipisci exercitationem facilis asperiores iure aperiam, vel eveniet rerum facere corporis. Distinctio, consectetur.";
+            }
+            function forTree(){
+                document.getElementById('4').innerText = '';
+                document.getElementById("4T").value = '';
+            }
+            window.onload = function(){
+                document.getElementById('1').style.border = "1px solid black";
+                tree();
+            }
+        </script>
+    </head>
+    <body>
+        <div id="1"><h1>1</h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptates voluptatibus, quidem aliquam possimus adipisci facilis hic! Adipisci exercitationem facilis asperiores iure aperiam, vel eveniet rerum facere corporis. Distinctio, consectetur.</div>
+        
+        <div id="2"><h1>2</h1> ipsum, dolor sit amet consectetur adipisicing elit. At voluptas voluptatem modi a impedit esse, nostrum id officiis, quo suscipit distinctio illo iste libero minima asperiores vitae dicta saepe excepturi!
+            <button onclick="twoOne()">1</button><button onclick="twoTwo()">2</button><button onclick="twoTree()">3</button>
+        </div>
+        
+        <div style="display: flex;">
+            <h1>3</h1>
+            <div class="tree">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deserunt est tempora voluptatum inventore alias, omnis neque soluta quam ipsum aspernatur? Ratione, ipsam nam totam veritatis iure in fugiat rem?</div>
+            <div class="tree">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, iusto voluptatum debitis rerum illo sint aliquid atque saepe itaque nisi beatae accusamus quam repellendus ducimus maxime minima dolore obcaecati unde.</div>
+            <div class="tree">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae deserunt cumque est! Cum amet iusto porro quaerat possimus fugit praesentium nulla rem. Non, quasi. Suscipit eius optio distinctio ipsum unde.</div>
+            <div class="tree">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsa eius fugit blanditiis sit sunt quidem doloribus nemo iste minus a, officiis voluptatum accusantium modi eos perspiciatis repellendus veniam doloremque.</div>
+            <div class="tree">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio molestiae accusantium nemo ex facilis corporis, nulla animi provident perspiciatis! Tenetur reiciendis est aspernatur quis placeat odit explicabo neque quaerat beatae.</div>
+        </div>
+
+        <div>
+            <h1>4</h1>
+            <p id="4"></p>
+            <input type="text" id="4T">
+            <button onclick="forOne()">1</button><button onclick="forTwo()">2</button><button onclick="forTree()">Reset</button>
+        </div>
+    </body>
+</html>
